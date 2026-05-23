@@ -4,11 +4,17 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from tools import web_search , scrape_url
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
 # create llm model
-llm = ChatOpenAI(model = "gpt-4.1-mini",temperature=0)
+llm = ChatOpenAI(
+    model = "gpt-4.1-mini",
+    temperature=0,
+    openai_api_base="https://openrouter.ai/api/v1",
+    openai_api_key=os.getenv("OPENROUTER_API_KEY")
+)
 
 # web search agent
 def build_search_agent():
