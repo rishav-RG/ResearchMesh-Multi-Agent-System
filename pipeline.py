@@ -12,7 +12,10 @@ def run_research_pipeline(topic : str) -> dict:
     
     search_agent = build_search_agent()
     search_result = search_agent.invoke({
-        "messages" : [("user", f"Find recent, reliable and detailed information about: {topic}")]
+    "messages": [("user",
+        f"Use the web_search tool. Return ONLY the raw tool output with titles, URLs, snippets. "
+        f"Do not summarize. Topic: {topic}"
+        )]
     })
     state["search_results"] = search_result['messages'][-1].content
 
