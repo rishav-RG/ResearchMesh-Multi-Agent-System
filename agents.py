@@ -10,7 +10,7 @@ load_dotenv()
 
 # create llm model
 llm = ChatOpenAI(
-    model="google/gemini-2.5-flash", # Changed from the rate-limited Llama model
+    model="openai/gpt-oss-120b:free",
     base_url="https://openrouter.ai/api/v1",
     api_key=os.getenv("OPENROUTER_API_KEY"),
     temperature=0,
