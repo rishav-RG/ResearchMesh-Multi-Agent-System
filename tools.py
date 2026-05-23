@@ -6,7 +6,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-# Tavily web search agent
 tavily = TavilyClient(api_key=os.getenv("TAVILY_API_KEY")) # Initialize Tavily client with API key
 
 # tool for web search 
