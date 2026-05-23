@@ -26,15 +26,22 @@ A simple research pipeline that searches the web, scrapes one source, writes a r
 
 ## How To Use
 
-1. Install dependencies.
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 2. Create a `.env` file with:
    - `TAVILY_API_KEY`
    - `OPENROUTER_API_KEY`
-3. Run:
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+4. Or test the pipeline in terminal:
    ```bash
    python pipeline.py
    ```
-4. Enter a research topic when prompted.
+5. Enter a research topic when prompted.
 
 ## Problems Faced
 
