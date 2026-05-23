@@ -10,10 +10,11 @@ load_dotenv()
 
 # create llm model
 llm = ChatOpenAI(
-    model = "gpt-4.1-mini",
+    model="google/gemini-2.5-flash", # Changed from the rate-limited Llama model
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.getenv("OPENROUTER_API_KEY"),
     temperature=0,
-    openai_api_base="https://openrouter.ai/api/v1",
-    openai_api_key=os.getenv("OPENROUTER_API_KEY")
+    max_tokens=1200
 )
 
 # web search agent
@@ -50,7 +51,7 @@ Structure the report as:
 Be detailed, factual and professional."""),
 ])
 
-writer_chain = writer_prompt | llm | StrOutputParser
+writer_chain = writer_prompt | llm | StrOutputParser()
 
 # critic_chain
 

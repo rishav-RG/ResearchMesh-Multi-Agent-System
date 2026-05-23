@@ -26,7 +26,7 @@ def web_search(query : str) -> str:
     # join formatted results into a single string.
     return "\n----\n".join(out)
 
-# print(web_search.invoke("what are latest news on foriegn deals of india?"))
+# print(web_search.invoke("wars impact on stock market"))
 
 
 # tool for scraping
