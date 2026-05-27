@@ -2,9 +2,7 @@
 
 A simple research pipeline that searches the web, scrapes one source, writes a report, and critiques the result.
 
-<video src="researchAgent_demo.mp4" controls width="600">
-   Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/8bd39e6d-5fe5-4a57-9ea8-2a91b7d5f56b
 
 ## Flow
 
