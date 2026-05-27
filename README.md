@@ -2,6 +2,10 @@
 
 A simple research pipeline that searches the web, scrapes one source, writes a report, and critiques the result.
 
+<video src="researchAgent_demo.mp4" controls width="600">
+   Your browser does not support the video tag.
+</video>
+
 ## Flow
 
 1. Search agent uses the web search tool to fetch recent sources.
